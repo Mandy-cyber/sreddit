@@ -3,8 +3,8 @@
 
 ### **INSTALLATION**
 
-[Download PyPi Package](https://pypi.org/project/srtitles/#files) , or
-```pip install srtitles```
+[Download PyPi Package](https://pypi.org/project/sreddit/#files) , or
+```pip install sreddit```
 <br><br>
 
 ### **MODULES**

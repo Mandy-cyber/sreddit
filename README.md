@@ -25,7 +25,7 @@ subRedditName = "name of a subreddit"
 listOfTitles = srtitles.scrapeMe(subRedditName)
 print(listOfTitles)
 ```
-<b>N.B -</b> Put chromdriver.exe in the same folder as your code in order to run the modules, and some subreddits have a lot of pages and it takes time for each page to load for infinite scrolling... Get a cup of tea in the meanwhile <3.
+<b>N.B -</b> Some subreddits have a lot of pages and it takes time for each page to load for infinite scrolling... Get a cup of tea in the meanwhile <3.
 
 
 

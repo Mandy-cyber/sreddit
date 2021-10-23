@@ -1,6 +1,6 @@
 # SubRedditScraper
 ## *Python package for scraping user-inputted subreddits*
-
+---
 ### **INSTALLATION**
 
 [Download PyPi Package](https://pypi.org/project/sreddit/#files) , or

@@ -16,9 +16,9 @@ $ pip install sreddit --upgrade
 
 ## **MODULES**
 
-MODULES | WHAT THEY DO
+MODULES | WHAT THEY DO/PROCESS
 ------------ | -------------
-**srtitles** | <ul><li>Takes user input as a subreddit name Navigates to subreddit</li><li>Loads the entire page (since reddit uses infinte scrolling)</li><li>Scrapes titles of posts and returns them in a list</li><li>_Will eventually add option to put list in a database you can then export._</li></ul>
+**srtitles** | <ol><li>Navigates to given subreddit</li><li>Scrapes titles of posts</li><li>Scrolls down, and repeats until it reaches the end of the page</li><li>Returns list of all titles found</li><li>_Will eventually put list in a database you can then export._</li></ol>
 **srcontent** | Coming soon
 
 <br>
@@ -29,7 +29,8 @@ MODULES | WHAT THEY DO
 ```python
 from sreddit import srtitles
 subRedditName = "name of a subreddit"
-listOfTitles = srtitles.scrapeMe(subRedditName)
+showProgress = "Yes" #if you don't want to show progress then you can leave string blank
+listOfTitles = srtitles.scrapeMe(subRedditName, showProgess)
 print(listOfTitles)
 ```
 <b>N.B -</b> Some subreddits have a lot of pages and it takes time for each page to load for infinite scrolling... Get a cup of tea in the meanwhile <3.

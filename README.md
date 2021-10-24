@@ -1,5 +1,5 @@
 # SubRedditScraper
-![GitHub](https://img.shields.io/github/license/Mandy-cyber/SubRedditScraper?color=%23bce1ff&style=flat-square)  ![GitHub repo size](https://img.shields.io/github/repo-size/Mandy-cyber/SubRedditScraper?color=%23ffcbc6&style=flat-square)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Mandy-cyber/SubRedditScraper?color=%23ff5373&display_name=tag&style=flat-square)  ![GitHub](https://img.shields.io/github/license/Mandy-cyber/SubRedditScraper?color=%23bce1ff&style=flat-square)  ![GitHub repo size](https://img.shields.io/github/repo-size/Mandy-cyber/SubRedditScraper?color=%23ffcbc6&style=flat-square)
 #### *Python package for scraping user-inputted subreddits*
 ---
 ## **INSTALLATION**

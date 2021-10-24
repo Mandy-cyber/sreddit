@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
 
-def scrapeMe(channelName, showProgress):
+def scrapeMe(channelName, showProgress, keyWords):
     channelName = channelName.lower().replace(" ", "") #make name of reddit channel lowercase and remove any spaces
     get_driver = GetChromeDriver() 
     get_driver.install() #download chromedriver
@@ -39,16 +39,15 @@ def scrapeMe(channelName, showProgress):
                 if alreadyExist > 0:
                     continue #if it exists we move onnnnn
                 else:
-                    if len(heading) > 0: #check to make sure the heading actually has content
+                    if len(heading) > 0 and any(word in heading for word in keyWords) == True: #check to make sure the heading actually has content and that a word in it is in the keyword list
                         # print(str(x) + ": "+ heading)
                         countTitles +=1 
                         print(f"Titles Found: {countTitles}", end="\r")
                         allTitleTexts.append(heading) #add heading to list
                     else:
-                        continue #if no content in heading then we move onnnn
+                        continue #if no content in heading and/or the word doesn't show in keywords then we move onnnn
             # Wait to load page
             time.sleep(scrollyNeedsABreak) 
-            print("")
 
             # Calculate new scroll height and ompare with last scroll height
             new_height = browser.execute_script("return document.body.scrollHeight")
@@ -66,10 +65,10 @@ def scrapeMe(channelName, showProgress):
                 if alreadyExist > 0:
                     continue #if it exists we move onnnnn
                 else:
-                    if len(heading) > 0: #check to make sure the heading actually has content
+                    if len(heading) > 0 and any(word in heading for word in keyWords) == True: #check to make sure the heading actually has content and that a word in it is in the keyword list
                         allTitleTexts.append(heading) #add heading to list
                     else:
-                        continue #if no content in heading then we move onnnn
+                        continue #if no content in heading and/or the word doesn't show in keywords then we move onnnn
             # Wait to load page
             time.sleep(scrollyNeedsABreak) 
 

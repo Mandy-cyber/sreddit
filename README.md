@@ -1,22 +1,29 @@
 # SubRedditScraper
-## *Python package for scraping user-inputted subreddits*
+![GitHub](https://img.shields.io/github/license/Mandy-cyber/SubRedditScraper?color=%23bce1ff&style=flat-square)  ![GitHub repo size](https://img.shields.io/github/repo-size/Mandy-cyber/SubRedditScraper?color=%23ffcbc6&style=flat-square)
+#### *Python package for scraping user-inputted subreddits*
 ---
-### **INSTALLATION**
+## **INSTALLATION**
+To install:
+[Download PyPi Package](https://pypi.org/project/sreddit/#files) , or <br>
+```$
+$ pip install sreddit
+```
+To upgrade:
+```$
+$ pip install sreddit --upgrade
+```
+<br>
 
-[Download PyPi Package](https://pypi.org/project/sreddit/#files) , or
-```pip install sreddit```
-<br><br>
-
-### **MODULES**
+## **MODULES**
 
 MODULES | WHAT THEY DO
 ------------ | -------------
-**srtitles** | <ul><li>Takes user input as a subreddit name Navigates to subreddit</li><li>Loads the entire page (since reddit uses infinte scrolling)</li><li>Scrapes titles of posts and returns them in a list</li><li>_Will eventually put list in a database you can then export._</li></ul>
+**srtitles** | <ul><li>Takes user input as a subreddit name Navigates to subreddit</li><li>Loads the entire page (since reddit uses infinte scrolling)</li><li>Scrapes titles of posts and returns them in a list</li><li>_Will eventually add option to put list in a database you can then export._</li></ul>
 **srcontent** | Coming soon
 
 <br>
 
-### **HOW TO USE:**
+## **USAGE:**
 ### _srtitles_
 
 ```python

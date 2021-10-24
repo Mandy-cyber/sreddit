@@ -30,7 +30,8 @@ MODULES | WHAT THEY DO/PROCESS
 from sreddit import srtitles
 subRedditName = "name of a subreddit"
 showProgress = "Yes" #if you don't want to show progress then you can leave string blank
-listOfTitles = srtitles.scrapeMe(subRedditName, showProgess)
+keyWords = ['word', 'wordTwo', 'wordThree'] #to only gather titles with one or more of these keywords in it. you can leave the list blank ['']
+listOfTitles = srtitles.scrapeMe(subRedditName, showProgess, keyWords)
 print(listOfTitles)
 ```
 <b>N.B -</b> Some subreddits have a lot of pages and it takes time for each page to load for infinite scrolling... Get a cup of tea in the meanwhile <3.

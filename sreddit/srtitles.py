@@ -4,6 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
 
+
 def scrapeMe(channelName, showProgress, keyWords):
     channelName = channelName.lower().replace(" ", "") #make name of reddit channel lowercase and remove any spaces
     get_driver = GetChromeDriver() 
@@ -49,7 +50,7 @@ def scrapeMe(channelName, showProgress, keyWords):
             # Wait to load page
             time.sleep(scrollyNeedsABreak) 
 
-            # Calculate new scroll height and ompare with last scroll height
+            # Calculate new scroll height and compare with last scroll height
             new_height = browser.execute_script("return document.body.scrollHeight")
             if new_height == last_height: #if it's the same height then we have reached the end of the road
                 break
@@ -72,7 +73,7 @@ def scrapeMe(channelName, showProgress, keyWords):
             # Wait to load page
             time.sleep(scrollyNeedsABreak) 
 
-            # Calculate new scroll height and ompare with last scroll height
+            # Calculate new scroll height and compare with last scroll height
             new_height = browser.execute_script("return document.body.scrollHeight")
             if new_height == last_height: #if it's the same height then we have reached the end of the road
                 break

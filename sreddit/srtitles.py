@@ -14,7 +14,7 @@ def create_database(allTitleTexts):
     cursor.execute(createTable)
     table_name = 'subreddittitles'
     for title in allTitleTexts:
-        cursor.execute("INSERT INTO {tableName} (title) VALUES(?, ?)".format(tableName=table_name),
+        cursor.execute("INSERT INTO {tableName} (title) VALUES(?)".format(tableName=table_name),
         (title))
         conn.commit()
 
@@ -96,3 +96,8 @@ def scrapeMe(channelName, showProgress, keyWords):
 
     return allTitleTexts
 
+keywords = ['']
+channelName = 'hackathons'
+showProgress = 'y'
+allTitleTexts = scrapeMe(channelName, showProgress, keywords)
+create_database(allTitleTexts)

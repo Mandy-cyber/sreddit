@@ -6,12 +6,18 @@ import time
 import sqlite3
 
 
-def create_database():
-    conn = sqlite3.connect('listofnews.db')
+def create_database(allTitleTexts):
+    conn = sqlite3.connect('listoftitles.db')
     cursor = conn.cursor()
     createTable = """CREATE TABLE IF NOT EXISTS
-    news(id INTEGER PRIMARY KEY autoincrement, newsTitle TEXT, newsLink TEXT)"""
+    subreddittitles(id INTEGER PRIMARY KEY autoincrement, title TEXT)"""
     cursor.execute(createTable)
+    table_name = 'subreddittitles'
+    for title in allTitleTexts:
+        cursor.execute("INSERT INTO {tableName} (title) VALUES(?, ?)".format(tableName=table_name),
+        (title))
+        conn.commit()
+
 
 
 def scrapeMe(channelName, showProgress, keyWords):

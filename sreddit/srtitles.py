@@ -3,6 +3,15 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
+import sqlite3
+
+
+def create_database():
+    conn = sqlite3.connect('listofnews.db')
+    cursor = conn.cursor()
+    createTable = """CREATE TABLE IF NOT EXISTS
+    news(id INTEGER PRIMARY KEY autoincrement, newsTitle TEXT, newsLink TEXT)"""
+    cursor.execute(createTable)
 
 
 def scrapeMe(channelName, showProgress, keyWords):

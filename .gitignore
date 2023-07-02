@@ -1,3 +1,3 @@
-sreddit/chromedriver/
-sreddit/improved.py
-sreddit/subreddit_info.db
+src/sreddit/chromedriver/
+src/sreddit/improved.py
+src/sreddit/subreddit_info.db

@@ -16,7 +16,7 @@ $ pip install sreddit --upgrade
 
 ## **MODULES**
 
-MODULES | WHAT THEY DO/PROCESS
+MODULES | WHAT THEY DO
 ------------ | -------------
 **srtitles** | Gets a list of all the unique titles in the subreddit.
 **srcontent** | Coming soon

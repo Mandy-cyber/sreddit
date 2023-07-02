@@ -172,10 +172,10 @@ class SubRedditScraper():
         change to find other things as well <3
         """
         self.find_titles()
-        # if self.make_db:
-        #     self.add_titles_to_db()
-        #     print(f"Titles added to {self.db_name}")
-        # else:
-        #     for title in self.titles:
-        #         print(title + "\n")
+        if self.make_db:
+            self.add_titles_to_db()
+            print(f"Titles added to {self.db_name}")
+        else:
+            for title in self.titles:
+                print(title + "\n")
         

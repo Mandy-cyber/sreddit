@@ -1,2 +1,2 @@
-from srtitles import SubRedditTitles
-from srbodies import SubRedditBodies
+from sreddit.srtitles import SubRedditTitles
+from sreddit.srbodies import SubRedditBodies

@@ -1,4 +1,4 @@
-src/sreddit/chromedriver/
-src/sreddit/subreddit_info.db
+src/chromedriver/
+src/subreddit_info.db
 build/
 venv/

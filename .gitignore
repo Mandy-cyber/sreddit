@@ -1,5 +1,4 @@
 src/sreddit/chromedriver/
 src/sreddit/subreddit_info.db
 build/
-dist/
 venv/

@@ -1,5 +1,12 @@
-# sreddit
-A simple tool for scraping information from subreddits.
+# SREDDIT
+> **A simple tool for scraping information from subreddits.**
+
+<div id="skills-icons" align="left">
+  <a target="_blank" href="#"><img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white"/></a>
+  <a target="_blank" href="#"><img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white"/></a>
+</div>
+
+
 
 <br>
 
@@ -30,7 +37,6 @@ scraper = SubRedditTitles(subreddit="subreddit_name")
 scraper.run()
 ```
 
-<br>
 
 ### **srbodies**
 Gets all unique post bodies (i.e. descriptions) from a subreddit.
@@ -48,7 +54,7 @@ scraper.run()
 
 <br>
 
-| **Argument** | **What it Does**                                                                       |
+| **Argument**          | **What it Does**                                                                       |
 |-----------------------|----------------------------------------------------------------------------------------|
 | keywords              | Only includes content that has one or more of these keywords                           |
 | show_progess          | Whether or not to show scraping progress (i.e. number of titles found) in the terminal |
@@ -60,3 +66,6 @@ scraper.run()
 <br>
 
 ## **FAQs**
+
+
+

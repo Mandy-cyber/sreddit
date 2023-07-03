@@ -11,7 +11,7 @@ setup(
     version=VERSION,
     author="Mandy-cyber",
     author_email="",
-    description=DESCRIPTION,\
+    description=DESCRIPTION,
     packages=find_packages(),
     url="https://github.com/Mandy-cyber/sreddit",
     install_requires=['selenium', 'get_chrome_driver', 'pysqlite3'],

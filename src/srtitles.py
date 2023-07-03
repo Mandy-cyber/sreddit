@@ -175,4 +175,3 @@ class SubRedditScraper():
         else:
             for title in self.titles:
                 print(title + "\n")
-        

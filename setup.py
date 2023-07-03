@@ -5,7 +5,7 @@ with open("README.md", "r", encoding = "utf-8") as fh:
 
 setup(
     name="sreddit",
-    version='1.0.2',
+    version='1.0.3',
     author="Mandy-cyber",
     author_email="",
     description='Web scraper for subreddits',

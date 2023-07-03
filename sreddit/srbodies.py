@@ -1,6 +1,6 @@
 import sqlite3
 from selenium.webdriver.common.by import By
-from srabstract import SubRedditScraper
+from sreddit.srabstract import SubRedditScraper
 
 class SubRedditBodies(SubRedditScraper):
     """

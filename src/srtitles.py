@@ -1,10 +1,4 @@
-from get_chrome_driver import GetChromeDriver
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-import time
-import sqlite3
-
 from srabstract import SubRedditScraper
 
 class SubRedditTitles(SubRedditScraper):
@@ -98,6 +92,3 @@ class SubRedditTitles(SubRedditScraper):
         else:
             for title in self.titles:
                 print(title + "\n")
-
-
-SubRedditTitles("beans").run()

@@ -1,17 +1,11 @@
 from setuptools import setup, find_packages
-import codecs
-import os
 
-VERSION = '1.0.0'
-DESCRIPTION = 'Web scraper for subreddits'
-
-# Setting up
 setup(
     name="sreddit",
-    version=VERSION,
+    version='1.0.0',
     author="Mandy-cyber",
     author_email="",
-    description=DESCRIPTION,
+    description='Web scraper for subreddits',
     packages=find_packages(),
     url="https://github.com/Mandy-cyber/sreddit",
     install_requires=['selenium', 'get_chrome_driver', 'pysqlite3'],

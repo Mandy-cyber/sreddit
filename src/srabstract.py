@@ -1,9 +1,7 @@
 from get_chrome_driver import GetChromeDriver
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 import time
-import sqlite3
 from abc import ABC, abstractmethod
 
 class SubRedditScraper(ABC):
@@ -54,23 +52,10 @@ class SubRedditScraper(ABC):
 
         chrome_options = Options()
         chrome_options.add_argument("--headless")
-        # chrome_options.add_experimental_option("detach", True)
         chrome_options.add_argument("--log-level=3")
         prefs = {"profile.default_content_setting_values.notifications" : 2}
         chrome_options.add_experimental_option("prefs",prefs)
         self.browser = webdriver.Chrome(options=chrome_options)
-           
-    
-    def setup_database(self) -> None:
-        """
-        Creates a new .db file, if one doesn't already exist, to hold the information 
-        found in the subreddit.
-        """
-        self.conn = sqlite3.connect(self.db_name)
-        self.cursor = self.conn.cursor()
-        createTable = """CREATE TABLE IF NOT EXISTS
-        srinfo(id INTEGER PRIMARY KEY autoincrement, title TEXT)"""
-        self.cursor.execute(createTable)
 
 
     def navigate_to_subreddit(self) -> None:
@@ -102,6 +87,15 @@ class SubRedditScraper(ABC):
         old_height = self.scroll_height
         self.scroll_height = new_height
         return new_height == old_height
+           
+    
+    @abstractmethod
+    def setup_database(self) -> None:
+        """
+        Creates a new .db file, if one doesn't already exist, to hold the information 
+        found in the subreddit.
+        """
+        pass
     
 
     @abstractmethod

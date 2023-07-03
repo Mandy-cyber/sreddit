@@ -1,3 +1,4 @@
+import sqlite3
 from selenium.webdriver.common.by import By
 from srabstract import SubRedditScraper
 
@@ -16,11 +17,24 @@ class SubRedditTitles(SubRedditScraper):
             subreddit: the name of the subreddit to be scraped
             keywords: list of words to look out for in the subreddit
             show_progress: if the progress should be shown in the terminal
-            make_db: if a database of the information found should be created
+            make_db: if a database of the titles found should be created
             scroll_time: time to wait between each scroll so page can load
         """
         super().__init__(subreddit, keywords, show_progress, make_db, db_name, scroll_time)
         self.titles = set()
+
+    
+    # OVERRIDE
+    def setup_database(self) -> None:
+        """
+        Creates a new .db file, if one doesn't already exist, to hold the titles 
+        found in the subreddit.
+        """
+        self.conn = sqlite3.connect(self.db_name)
+        self.cursor = self.conn.cursor()
+        createTable = """CREATE TABLE IF NOT EXISTS
+        srtitles(id INTEGER PRIMARY KEY autoincrement, title TEXT)"""
+        self.cursor.execute(createTable)
 
 
     # OVERRIDE
@@ -50,7 +64,6 @@ class SubRedditTitles(SubRedditScraper):
         Args:
             raw_content: the titles in raw, web-element, format
             use_keywords: whether, or not, keywords are necessary in the titles
-        
         """
         title_count = 0
 
@@ -76,7 +89,7 @@ class SubRedditTitles(SubRedditScraper):
         """
         for title in self.titles:
             self.cursor.execute("INSERT INTO {table_name} (title) VALUES(?)"
-                                .format(table_name='srinfo'),(title,))
+                                .format(table_name='srtitles'),(title,))
         self.conn.commit()
 
 

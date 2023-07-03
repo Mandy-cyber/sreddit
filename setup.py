@@ -13,7 +13,7 @@ setup(
     long_description_content_type = "text/markdown",
     packages=find_packages(),
     url="https://github.com/Mandy-cyber/sreddit",
-    install_requires=['selenium', 'get_chrome_driver', 'pysqlite3'],
+    install_requires=['selenium', 'get_chrome_driver'],
     keywords=['python', 'selenium', 'reddit', 'subreddit'],
     classifiers=[
         "Programming Language :: Python :: 3",

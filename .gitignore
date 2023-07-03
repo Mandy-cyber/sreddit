@@ -1,4 +1,5 @@
-src/chromedriver/
-src/subreddit_info.db
-build/
-venv/
+app/sreddit/src/chromedriver/
+app/sreddit/src/subreddit_info.db
+app/sreddit/src/srbodies.py
+setup.cfg
+setup.py

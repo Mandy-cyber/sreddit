@@ -4,7 +4,7 @@
 ---
 ## **INSTALLATION**
 To install:
-[Download PyPi Package](https://pypi.org/project/sreddit/#files) , or <br>
+[Download the PyPi Package](https://pypi.org/project/sreddit/#files) , or <br>
 ```$
 $ pip install sreddit
 ```
@@ -14,22 +14,11 @@ $ pip install sreddit --upgrade
 ```
 <br>
 
-## **MODULES**
 
-MODULES | WHAT THEY DO
------------- | -------------
-**srtitles** | Gets a list of all the unique titles in the subreddit.
-**srcontent** | Coming soon
+TODO: fill this out later lol
 
-<br>
 
-## **USAGE:**
-### _srtitles_
 
-```python
-scraper = SubRedditScraper("beans")
-scraper.find()
-```
 <b>N.B -</b> Some subreddits have a lot of pages and it takes time for each page to load for infinite scrolling... Get a cup of tea in the meanwhile <3.
 
 

@@ -1,5 +1,5 @@
-sreddit/chromedriver/
-sreddit/improved.py
-sreddit/subreddit_info.db
+src/sreddit/chromedriver/
+src/sreddit/subreddit_info.db
 build/
 dist/
+venv/
